@@ -14,6 +14,7 @@ import LessonDetail from "./pages/LessonDetail";
 import AssignmentDetail from "./pages/AssignmentDetail";
 import CommunityQuestion from "./pages/CommunityQuestion";
 import CourseDetail from "./pages/CourseDetail";
+import Catalog from "./pages/Catalog";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/catalog" element={<Catalog />} />
           <Route path="/courses" element={<Courses />} />
           <Route path="/course/:courseId" element={<CourseDetail />} />
           <Route path="/lessons" element={<Lessons />} />
