@@ -4,6 +4,8 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Link } from 'react-router-dom';
+import AIAssistant from '@/components/AIAssistant';
 
 const Assignments = () => {
   const assignments = {
@@ -190,7 +192,9 @@ const Assignments = () => {
                   </div>
 
                   <div className="flex flex-col gap-2">
-                    <Button>Продолжить</Button>
+                    <Link to={`/assignment/${assignment.id}`}>
+                      <Button>Продолжить</Button>
+                    </Link>
                     <Button variant="outline" size="sm">
                       <Download className="w-4 h-4 mr-2" />
                       Скачать материалы
@@ -249,7 +253,9 @@ const Assignments = () => {
                   </div>
 
                   <div className="flex flex-col gap-2">
-                    <Button variant="outline">Просмотреть работу</Button>
+                    <Link to={`/assignment/${assignment.id}`}>
+                      <Button variant="outline">Просмотреть работу</Button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -314,6 +320,8 @@ const Assignments = () => {
           </TabsContent>
         </Tabs>
       </main>
+      
+      <AIAssistant />
     </div>
   );
 };

@@ -6,6 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Search, Filter, SlidersHorizontal } from 'lucide-react';
 import { mockCourses, courseCategories } from '@/data/mockCourses';
+import AIAssistant from '@/components/AIAssistant';
 
 const Courses = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -35,7 +36,7 @@ const Courses = () => {
         <div className="mb-12">
           <h1 className="text-4xl md:text-5xl font-light text-foreground mb-4 tracking-tight">Эксклюзивные программы</h1>
           <p className="text-lg text-muted-foreground font-light leading-relaxed">
-            Премиальное образование в разработке игр от ведущих экспертов индустрии
+            Платформа для изучения разработки игр от ведущих экспертов индустрии
           </p>
         </div>
 
@@ -184,6 +185,8 @@ const Courses = () => {
           </div>
         )}
       </main>
+      
+      <AIAssistant />
     </div>
   );
 };

@@ -29,15 +29,15 @@ const HeroSection = () => {
         {/* Main Heading */}
         <div className="mb-10 animate-scale-in" style={{ animationDelay: '0.2s' }}>
           <h1 className="text-5xl md:text-6xl lg:text-8xl font-light text-foreground mb-6 leading-tight tracking-tight">
-            Элитное
+            Онлайн
             <span className="block text-accent font-normal">
               образование
             </span>
             в геймдеве
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light">
-            Премиальная платформа для изучения разработки игр с ведущими экспертами индустрии. 
-            Индивидуальный подход, проверенные методики, гарантированный результат.
+            Платформа для изучения разработки игр с ведущими экспертами индустрии. 
+Индивидуальный подход, проверенные методики, гарантированный результат.
           </p>
         </div>
 

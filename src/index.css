@@ -31,9 +31,8 @@
     --muted: 218 15% 13%;              /* More defined surfaces */
     --muted-foreground: 220 8% 75%;    /* Cleaner muted text */
 
-    /* Accent color - premium gold/amber for luxury */
-    --accent: 38 95% 62%;              /* Luxury gold accent */
-    --accent-foreground: 218 15% 8%;   /* Dark text on gold */
+    --accent: 200 80% 55%;       /* Чистый голубой */
+    --accent-foreground: 220 15% 97%;
 
     /* Success color - sophisticated green */
     --success: 155 70% 45%;

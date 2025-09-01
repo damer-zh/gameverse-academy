@@ -3,6 +3,8 @@ import { Play, Clock, CheckCircle, Lock, Book, Video } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
+import { Link } from 'react-router-dom';
+import AIAssistant from '@/components/AIAssistant';
 
 const Lessons = () => {
   const courseProgress = 65;
@@ -183,17 +185,23 @@ const Lessons = () => {
                         Заблокировано
                       </Button>
                     ) : lesson.completed ? (
-                      <Button variant="ghost" size="sm" className="text-muted-foreground">
-                        Повторить
-                      </Button>
+                      <Link to={`/lesson/${lesson.id}`}>
+                        <Button variant="ghost" size="sm" className="text-muted-foreground">
+                          Повторить
+                        </Button>
+                      </Link>
                     ) : lesson.current ? (
-                      <Button size="sm">
-                        Продолжить
-                      </Button>
+                      <Link to={`/lesson/${lesson.id}`}>
+                        <Button size="sm">
+                          Продолжить
+                        </Button>
+                      </Link>
                     ) : (
-                      <Button variant="outline" size="sm">
-                        Начать
-                      </Button>
+                      <Link to={`/lesson/${lesson.id}`}>
+                        <Button variant="outline" size="sm">
+                          Начать
+                        </Button>
+                      </Link>
                     )}
                   </div>
                 </div>
@@ -222,6 +230,8 @@ const Lessons = () => {
           </div>
         </div>
       </main>
+      
+      <AIAssistant />
     </div>
   );
 };

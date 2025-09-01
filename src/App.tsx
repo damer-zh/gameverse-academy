@@ -10,6 +10,10 @@ import Assignments from "./pages/Assignments";
 import Community from "./pages/Community";
 import Profile from "./pages/Profile";
 import TeacherDashboard from "./pages/TeacherDashboard";
+import LessonDetail from "./pages/LessonDetail";
+import AssignmentDetail from "./pages/AssignmentDetail";
+import CommunityQuestion from "./pages/CommunityQuestion";
+import CourseDetail from "./pages/CourseDetail";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,9 +27,13 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/courses" element={<Courses />} />
+          <Route path="/course/:courseId" element={<CourseDetail />} />
           <Route path="/lessons" element={<Lessons />} />
+          <Route path="/lesson/:lessonId" element={<LessonDetail />} />
           <Route path="/assignments" element={<Assignments />} />
+          <Route path="/assignment/:assignmentId" element={<AssignmentDetail />} />
           <Route path="/community" element={<Community />} />
+          <Route path="/community/question/:questionId" element={<CommunityQuestion />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/teacher" element={<TeacherDashboard />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

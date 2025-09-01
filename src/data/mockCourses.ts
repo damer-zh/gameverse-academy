@@ -59,7 +59,7 @@ export const mockCourses: Course[] = [
     title: 'Unreal Engine: Визуальное программирование',
     description: 'Мастерское владение Blueprint-системой и создание AAA-игр без программирования.',
     image: 'https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=400&h=225&fit=crop',
-    instructor: 'Игорь Волков',
+    instructor: 'Динара Абаевна',
     rating: 4.6,
     duration: '5 месяцев',
     students: 67,

@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import CourseCarousel from '@/components/CourseCarousel';
+import AIAssistant from '@/components/AIAssistant';
 import { mockCourses, enrolledCourses, popularCourses, newCourses } from '@/data/mockCourses';
 
 const Home = () => {
@@ -25,8 +26,8 @@ const Home = () => {
           
           {/* Popular Courses */}
           <CourseCarousel
-            title="Премиальные программы"
-            subtitle="Элитные курсы от ведущих экспертов индустрии"
+            title="Образовательные программы"
+            subtitle="Лучшие курсы от ведущих экспертов индустрии"
             courses={popularCourses}
           />
           
@@ -85,6 +86,8 @@ const Home = () => {
           </div>
         </section>
       </main>
+      
+      <AIAssistant />
     </div>
   );
 };

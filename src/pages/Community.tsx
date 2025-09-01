@@ -4,6 +4,8 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Link } from 'react-router-dom';
+import AIAssistant from '@/components/AIAssistant';
 
 const Community = () => {
   const discussions = [
@@ -64,15 +66,15 @@ const Community = () => {
 
   const topContributors = [
     {
-      name: 'Игорь Волков',
-      avatar: 'ИВ',
+      name: 'Динара Абаевна',
+      avatar: 'ДА',
       points: 2540,
       badge: 'Эксперт Unity',
       contributions: 156
     },
     {
-      name: 'Елена Морозова',
-      avatar: 'ЕМ',
+      name: 'Тахмина Сардарян',
+      avatar: 'ТС',
       points: 1890,
       badge: '3D Гуру',
       contributions: 124
@@ -162,9 +164,11 @@ const Community = () => {
                         </div>
 
                         {/* Title */}
-                        <h3 className="text-lg font-semibold text-foreground mb-2 hover:text-accent transition-colors">
-                          {discussion.title}
-                        </h3>
+                        <Link to={`/community/question/${discussion.id}`}>
+                          <h3 className="text-lg font-semibold text-foreground mb-2 hover:text-accent transition-colors">
+                            {discussion.title}
+                          </h3>
+                        </Link>
 
                         {/* Excerpt */}
                         <p className="text-sm text-muted-foreground mb-3 line-clamp-2">
@@ -318,6 +322,8 @@ const Community = () => {
           </div>
         </div>
       </main>
+      
+      <AIAssistant />
     </div>
   );
 };

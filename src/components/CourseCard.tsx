@@ -1,6 +1,7 @@
 import { Star, Clock, Users, Play } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { Link } from 'react-router-dom';
 
 interface CourseCardProps {
   id: string;
@@ -52,10 +53,12 @@ const CourseCard = ({
         
         {/* Overlay on Hover */}
         <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-          <Button size="lg" variant="premium" className="bg-accent/90 hover:bg-accent text-accent-foreground shadow-lg">
-            <Play className="w-5 h-5 mr-2" />
-            {isEnrolled ? 'Продолжить' : 'Подробнее'}
-          </Button>
+          <Link to={`/course/${id}`}>
+            <Button size="lg" variant="premium" className="bg-accent/90 hover:bg-accent text-accent-foreground shadow-lg">
+              <Play className="w-5 h-5 mr-2" />
+              {isEnrolled ? 'Продолжить' : 'Подробнее'}
+            </Button>
+          </Link>
         </div>
 
         {/* Progress Bar (if enrolled) */}
@@ -82,9 +85,11 @@ const CourseCard = ({
         </div>
 
         {/* Title and Instructor */}
-        <h3 className="text-xl font-light text-foreground mb-3 line-clamp-2 group-hover:text-accent transition-colors tracking-tight">
-          {title}
-        </h3>
+        <Link to={`/course/${id}`}>
+          <h3 className="text-xl font-light text-foreground mb-3 line-clamp-2 group-hover:text-accent transition-colors tracking-tight cursor-pointer">
+            {title}
+          </h3>
+        </Link>
         <p className="text-base text-muted-foreground mb-4 font-medium">Эксперт: {instructor}</p>
 
         {/* Description */}
@@ -110,13 +115,17 @@ const CourseCard = ({
 
         {/* Action Button */}
         {isEnrolled ? (
-          <Button className="w-full" variant="default" size="lg">
-            Продолжить обучение {progress > 0 && `(${progress}%)`}
-          </Button>
+          <Link to={`/course/${id}`}>
+            <Button className="w-full" variant="default" size="lg">
+              Продолжить обучение {progress > 0 && `(${progress}%)`}
+            </Button>
+          </Link>
         ) : (
-          <Button className="w-full" variant="luxury" size="lg">
-            Подать заявку
-          </Button>
+          <Link to={`/course/${id}`}>
+            <Button className="w-full" variant="luxury" size="lg">
+              Подать заявку
+            </Button>
+          </Link>
         )}
       </div>
     </div>
