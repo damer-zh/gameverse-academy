@@ -2,65 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Netflix-inspired GameDev Academy Design System */
-/* Dark minimalism with muted purple and green accents */
+/* Shu School Premium Design System */
+/* Strict minimalism with sophisticated contrast and luxury aesthetics */
 
 @layer base {
   :root {
-    /* Dark Netflix-inspired color palette */
-    --background: 220 13% 9%;           /* Very dark background */
-    --foreground: 220 9% 96%;           /* Light text */
+    /* Premium dark color palette */
+    --background: 218 15% 8%;           /* Deep sophisticated background */
+    --foreground: 220 15% 97%;          /* Crisp white text */
 
-    /* Card and surface colors */
-    --card: 220 13% 11%;                /* Slightly lighter than background */
-    --card-foreground: 220 9% 96%;
+    /* Card and surface colors with more contrast */
+    --card: 218 15% 10%;                /* Elevated surface */
+    --card-foreground: 220 15% 97%;
 
     /* Popover colors */
-    --popover: 220 13% 11%;
-    --popover-foreground: 220 9% 96%;
+    --popover: 218 15% 10%;
+    --popover-foreground: 220 15% 97%;
 
-    /* Primary brand color - muted purple */
-    --primary: 260 15% 25%;             /* Deep muted purple */
-    --primary-foreground: 220 9% 96%;
+    /* Primary brand color - sophisticated charcoal */
+    --primary: 220 20% 14%;             /* Deep charcoal for premium feel */
+    --primary-foreground: 220 15% 97%;
 
-    /* Secondary accent - muted green */
-    --secondary: 140 12% 20%;           /* Deep muted green */
-    --secondary-foreground: 220 9% 96%;
+    /* Secondary accent - refined dark blue */
+    --secondary: 215 25% 16%;           /* Sophisticated dark blue */
+    --secondary-foreground: 220 15% 97%;
 
-    /* Muted surfaces */
-    --muted: 220 13% 15%;              /* Slightly lighter surface */
-    --muted-foreground: 220 5% 65%;    /* Muted text */
+    /* Muted surfaces with higher contrast */
+    --muted: 218 15% 13%;              /* More defined surfaces */
+    --muted-foreground: 220 8% 75%;    /* Cleaner muted text */
 
-    /* Accent color - bright muted purple for highlights */
-    --accent: 260 25% 35%;             /* Brighter purple for interactions */
-    --accent-foreground: 220 9% 96%;
+    /* Accent color - premium gold/amber for luxury */
+    --accent: 38 95% 62%;              /* Luxury gold accent */
+    --accent-foreground: 218 15% 8%;   /* Dark text on gold */
 
-    /* Success color - muted green */
-    --success: 140 20% 30%;
-    --success-foreground: 220 9% 96%;
+    /* Success color - sophisticated green */
+    --success: 155 70% 45%;
+    --success-foreground: 220 15% 97%;
 
-    /* Destructive/error colors */
-    --destructive: 0 40% 35%;
-    --destructive-foreground: 220 9% 96%;
+    /* Destructive/error colors - refined red */
+    --destructive: 0 65% 51%;
+    --destructive-foreground: 220 15% 97%;
 
-    /* Borders and inputs */
-    --border: 220 13% 18%;             /* Subtle border */
-    --input: 220 13% 15%;              /* Input background */
-    --ring: 260 25% 45%;               /* Focus ring */
+    /* Borders and inputs with better definition */
+    --border: 218 15% 20%;             /* More defined borders */
+    --input: 218 15% 12%;              /* Darker input background */
+    --ring: 38 95% 62%;                /* Gold focus ring */
 
-    /* Glass effect variables */
-    --glass-bg: 220 13% 11% / 0.8;     /* Semi-transparent background */
-    --glass-border: 220 13% 25% / 0.3; /* Subtle glass border */
+    /* Glass effect variables - more premium */
+    --glass-bg: 218 15% 10% / 0.95;    /* Less transparent, more solid */
+    --glass-border: 220 20% 30% / 0.4; /* More visible glass border */
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(260 15% 25%), hsl(260 20% 30%));
-    --gradient-accent: linear-gradient(135deg, hsl(260 25% 35%), hsl(140 20% 30%));
-    --gradient-surface: linear-gradient(135deg, hsl(220 13% 11%), hsl(220 13% 13%));
+    /* Premium gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(220 20% 14%), hsl(220 25% 18%));
+    --gradient-accent: linear-gradient(135deg, hsl(38 95% 62%), hsl(42 88% 58%));
+    --gradient-surface: linear-gradient(135deg, hsl(218 15% 10%), hsl(220 18% 12%));
 
-    /* Shadows */
-    --shadow-glass: 0 8px 32px hsl(220 13% 5% / 0.4);
-    --shadow-card: 0 4px 24px hsl(220 13% 5% / 0.3);
-    --shadow-elevated: 0 12px 40px hsl(220 13% 5% / 0.5);
+    /* Elevated shadows for premium feel */
+    --shadow-glass: 0 16px 48px hsl(218 15% 4% / 0.6);
+    --shadow-card: 0 8px 32px hsl(218 15% 4% / 0.4);
+    --shadow-elevated: 0 24px 64px hsl(218 15% 4% / 0.7);
 
     /* Animation variables */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);

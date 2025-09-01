@@ -52,9 +52,9 @@ const CourseCard = ({
         
         {/* Overlay on Hover */}
         <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-          <Button size="lg" className="bg-white/20 hover:bg-white/30 text-white border-white/30">
+          <Button size="lg" variant="premium" className="bg-accent/90 hover:bg-accent text-accent-foreground shadow-lg">
             <Play className="w-5 h-5 mr-2" />
-            {isEnrolled ? 'Продолжить' : 'Просмотр'}
+            {isEnrolled ? 'Продолжить' : 'Подробнее'}
           </Button>
         </div>
 
@@ -82,40 +82,40 @@ const CourseCard = ({
         </div>
 
         {/* Title and Instructor */}
-        <h3 className="text-lg font-semibold text-foreground mb-2 line-clamp-2 group-hover:text-accent transition-colors">
+        <h3 className="text-xl font-light text-foreground mb-3 line-clamp-2 group-hover:text-accent transition-colors tracking-tight">
           {title}
         </h3>
-        <p className="text-sm text-muted-foreground mb-3">от {instructor}</p>
+        <p className="text-base text-muted-foreground mb-4 font-medium">Эксперт: {instructor}</p>
 
         {/* Description */}
-        <p className="text-sm text-muted-foreground mb-4 line-clamp-3">
+        <p className="text-base text-muted-foreground mb-6 line-clamp-3 leading-relaxed font-light">
           {description}
         </p>
 
         {/* Stats */}
-        <div className="flex items-center space-x-4 text-xs text-muted-foreground mb-4">
+        <div className="flex items-center space-x-6 text-sm text-muted-foreground mb-6 font-medium">
           <div className="flex items-center">
-            <Star className="w-3 h-3 fill-yellow-400 text-yellow-400 mr-1" />
-            <span>{rating}</span>
+            <Star className="w-4 h-4 fill-accent text-accent mr-2" />
+            <span>{rating}/5</span>
           </div>
           <div className="flex items-center">
-            <Clock className="w-3 h-3 mr-1" />
+            <Clock className="w-4 h-4 mr-2" />
             <span>{duration}</span>
           </div>
           <div className="flex items-center">
-            <Users className="w-3 h-3 mr-1" />
-            <span>{students.toLocaleString()}</span>
+            <Users className="w-4 h-4 mr-2" />
+            <span>{students} студентов</span>
           </div>
         </div>
 
         {/* Action Button */}
         {isEnrolled ? (
-          <Button className="w-full" variant="default">
+          <Button className="w-full" variant="default" size="lg">
             Продолжить обучение {progress > 0 && `(${progress}%)`}
           </Button>
         ) : (
-          <Button className="w-full" variant="outline">
-            Записаться на курс
+          <Button className="w-full" variant="luxury" size="lg">
+            Подать заявку
           </Button>
         )}
       </div>

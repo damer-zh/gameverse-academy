@@ -13,73 +13,73 @@ const Home = () => {
         <HeroSection />
         
         {/* Course Carousels */}
-        <div className="container mx-auto px-4 py-16 space-y-16">
+        <div className="container mx-auto px-4 py-20 space-y-24">
           {/* Continue Learning (if user has enrolled courses) */}
           {enrolledCourses.length > 0 && (
             <CourseCarousel
-              title="Продолжить обучение"
-              subtitle="Ваши активные курсы"
+              title="Ваши активные программы"
+              subtitle="Продолжите изучение эксклюзивных курсов"
               courses={enrolledCourses}
             />
           )}
           
           {/* Popular Courses */}
           <CourseCarousel
-            title="Популярные курсы"
-            subtitle="Лучшие курсы по мнению студентов"
+            title="Премиальные программы"
+            subtitle="Элитные курсы от ведущих экспертов индустрии"
             courses={popularCourses}
           />
           
           {/* New Courses */}
           <CourseCarousel
-            title="Новые курсы"
-            subtitle="Недавно добавленные курсы"
+            title="Новые программы"
+            subtitle="Недавно запущенные эксклюзивные курсы"
             courses={newCourses}
           />
           
           {/* Unity Courses */}
           <CourseCarousel
-            title="Курсы по Unity"
-            subtitle="Освойте самый популярный игровой движок"
+            title="Мастерство Unity"
+            subtitle="Глубокое изучение самого популярного игрового движка"
             courses={mockCourses.filter(course => course.category === 'Unity')}
           />
           
           {/* Programming Courses */}
           <CourseCarousel
-            title="Программирование для игр"
-            subtitle="Изучите языки программирования для геймдева"
+            title="Программирование высокого уровня"
+            subtitle="Продвинутые техники разработки игр"
             courses={mockCourses.filter(course => course.category === 'Программирование')}
           />
         </div>
         
-        {/* Stats Section */}
-        <section className="bg-muted/20 py-16">
+        {/* Premium Features Section */}
+        <section className="py-24 border-y border-border/10">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-foreground mb-4">
-                Почему выбирают GameDev Academy?
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-light text-foreground mb-6 tracking-tight">
+                Почему выбирают Shu School?
               </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Присоединяйтесь к тысячам разработчиков, которые уже создают игры своей мечты
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-light leading-relaxed">
+                Эксклюзивная образовательная платформа с индивидуальным подходом к каждому студенту
               </p>
             </div>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-accent mb-2">15,000+</div>
-                <div className="text-sm text-muted-foreground">Активных студентов</div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="text-center glass-card p-8 rounded-2xl">
+                <div className="text-4xl font-light text-accent mb-4">500+</div>
+                <div className="text-base text-muted-foreground font-medium">Успешных выпускников</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-accent mb-2">200+</div>
-                <div className="text-sm text-muted-foreground">Курсов и уроков</div>
+              <div className="text-center glass-card p-8 rounded-2xl">
+                <div className="text-4xl font-light text-accent mb-4">15+</div>
+                <div className="text-base text-muted-foreground font-medium">Эксклюзивных программ</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-accent mb-2">50+</div>
-                <div className="text-sm text-muted-foreground">Экспертов-преподавателей</div>
+              <div className="text-center glass-card p-8 rounded-2xl">
+                <div className="text-4xl font-light text-accent mb-4">98%</div>
+                <div className="text-base text-muted-foreground font-medium">Трудоустройство</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-accent mb-2">1,000+</div>
-                <div className="text-sm text-muted-foreground">Опубликованных игр</div>
+              <div className="text-center glass-card p-8 rounded-2xl">
+                <div className="text-4xl font-light text-accent mb-4">1:5</div>
+                <div className="text-base text-muted-foreground font-medium">Наставник/студент</div>
               </div>
             </div>
           </div>
